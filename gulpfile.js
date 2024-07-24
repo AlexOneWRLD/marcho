@@ -18,7 +18,7 @@ function styles() {
       })
     )
     .pipe(dest("app/css"))
-    .pipe(browserSync.stream())
+    .pipe(browserSync.stream());
 }
 
 function scripts () {

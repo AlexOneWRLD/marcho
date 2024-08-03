@@ -23,6 +23,54 @@ body {
   margin: 0 auto;
 }
 
+.breadcrumbs {
+  display: inline-flex;
+  justify-content: center;
+  padding-left: 25px;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width:16px;
+    height: 16px;
+    background-image: url("../images/icons/home.svg");
+    }
+  &__list {
+    display: flex;
+  }
+  
+  &__item {
+    color: #727272;
+    padding-right: 40px;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      right: 15px;
+      top: 9px;
+      background-image: url("../images/icons/angle-right.svg") ;
+      width: 9px;
+      height: 10px;
+    }
+    
+    &:last-child {
+      padding-right: 0;
+      color: $accent;
+      &::after {
+        display: none;
+      }
+    }
+  }
+  
+  &__link {
+    color: inherit;
+  }
+}
+
+
 a {
   font-size: 16px;
   line-height: 26px;
